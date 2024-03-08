@@ -11,13 +11,12 @@ export const Experience = () => {
       <pointLight position={[-3, -3, 2]} />
       <OrbitControls enableZoom={false} />
       <Suspense fallback={null}> {/*TODO: Add fallback loading*/}
-        <ScrollControls pages={2} damping={0.25}>
-              <Overlay />
-              <Float speed={.5} rotationIntensity={1} floatIntensity={0}>
-                  <Avocado position={[0, 0.5, -1]} onClick={(e) => console.log("avocado")} scale={40}/>
-              </Float>
-              <ContactShadows position={[0, -0.3, 0]} blur={4.5} scale={20} far={20}/>
-        </ScrollControls>
+          {/* <Overlay /> */}
+          <Float speed={.5} rotationIntensity={1} floatIntensity={0}>
+              <Avocado position={[0, 0, 0]} onClick={(e) => console.log("avocado")} scale={20}/>
+          </Float>
+          <ContactShadows position={[0, -0.3, 0]} blur={4.5} scale={20} far={20}/>
+        
       </Suspense>
     </>
   );
